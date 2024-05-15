@@ -2,7 +2,7 @@ function Banner() {
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 md:flex">
-        <div className="text-3xl md:text-4xl w-full md:w-1/2 mt-12 md:mt-36 md:text-slate-700 leading-normal md:leading-relaxed ">
+        <div className="text-3xl md:text-4xl w-full md:w-1/2 mt-12 md:mt-36 md:text-slate-700 leading-normal md:leading-relaxed">
           Discover a world of books, both
           <span className="bg-green-300 text-black p-1 md:rounded-2xl mx-2">FREE</span> and
           <span className="bg-yellow-300 text-black p-1 md:rounded-md mx-2">PAID</span>, in our
@@ -22,9 +22,17 @@ function Banner() {
             <button className="md:btn hidden md:btn-success md:bg-green-200 ">Submit</button>
           </div>
         </div>
-        {/* <div className="w-full md:w-1/2 mt-4 mx-4 md:mt-16 ">
-          <img src="../../public/books_png.png" alt="" className="h-3/5" />
-        </div> */}
+        <div className="flex justify-center items-center md:flex md:justify-center md:items-center md:w-1/2 mt-4 mx-4 md:mt-16 ">
+          <img src="../../public/books_png.png" alt="" className="w-72 md:w-96 h-full md:ml-28" />
+        </div>
+        <div className="join md:hidden mb-4 flex justify-center items-center">
+          <input
+            type="text"
+            placeholder="username@site.com"
+            className="input bg-orange-50 border-black  join-item"
+          />
+          <button className="btn btn-success join-item">Submit</button>
+        </div>
       </div>
     </>
   );
