@@ -1,6 +1,26 @@
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from 'react';
+
 function Navbar() {
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
+    <div
+      className={`w-full bg-orange-50 md:bg-orange-50 max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 ${
+        sticky ? 'shadow-xl md:shadow-md duration-300 transition-all ease-in-out' : ''
+      }`}>
       <div className="navbar text-black">
         <div className="navbar-start">
           <div className="dropdown">
