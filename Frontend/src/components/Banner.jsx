@@ -2,7 +2,7 @@ function Banner() {
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 md:flex my-12">
-        <div className="text-3xl md:text-4xl w-full md:w-1/2 mt-16 md:mt-36 md:text-slate-700 leading-normal md:leading-relaxed">
+        <div className="text-3xl md:text-4xl w-full md:w-1/2 mt-16 md:mt-36 text-slate-500 md:text-slate-700 leading-normal md:leading-relaxed">
           Discover a world of books, both
           <span className="bg-green-300 text-black p-1 md:rounded-2xl mx-2">FREE</span> and
           <span className="bg-yellow-300 text-black p-1 md:rounded-md mx-2">PAID</span>, in our
