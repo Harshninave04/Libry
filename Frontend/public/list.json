@@ -7,7 +7,7 @@
     "description": "Description 1",
     "price": 100,
     "category": "Free",
-    "image": "https://picsum.photos/200/300"
+    "image": "sunset.png"
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "description": "Description 2",
     "price": 200,
     "category": "Free",
-    "image": "https://picsum.photos/200/400"
+    "image": "sunset.png"
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "description": "Description 3",
     "price": 300,
     "category": "Free",
-    "image": "https://picsum.photos/300/500"
+    "image": "sunset.png"
   },
   {
     "id": 4,
@@ -37,7 +37,7 @@
     "description": "Description 4",
     "price": 400,
     "category": "Paid",
-    "image": "https://picsum.photos/400/600"
+    "image": "sunset.png"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "description": "Description 5",
     "price": 500,
     "category": "Paid",
-    "image": "https://picsum.photos/500/700"
+    "image": "sunset.png"
   },
   {
     "id": 1,
@@ -57,7 +57,7 @@
     "description": "Description 1",
     "price": 100,
     "category": "Free",
-    "image": "https://picsum.photos/200/300"
+    "image": "sunset.png"
   },
   {
     "id": 2,
@@ -67,7 +67,7 @@
     "description": "Description 2",
     "price": 200,
     "category": "Free",
-    "image": "https://picsum.photos/200/400"
+    "image": "sunset.png"
   },
   {
     "id": 3,
@@ -77,7 +77,7 @@
     "description": "Description 3",
     "price": 300,
     "category": "Free",
-    "image": "https://picsum.photos/300/500"
+    "image": "sunset.png"
   },
   {
     "id": 4,
@@ -87,7 +87,7 @@
     "description": "Description 4",
     "price": 400,
     "category": "Paid",
-    "image": "https://picsum.photos/400/600"
+    "image": "sunset.png"
   },
   {
     "id": 5,
@@ -97,6 +97,6 @@
     "description": "Description 5",
     "price": 500,
     "category": "Paid",
-    "image": "https://picsum.photos/500/700"
+    "image": "sunset.png"
   }
 ]
