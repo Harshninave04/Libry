@@ -1,15 +1,14 @@
-import AvailBooks from './components/AvailBooks';
-import Banner from './components/Banner';
-import Footer from './components/Footer';
-import Navbar from './components/Navbar';
-
+import Home from './Home/Home';
+import { Route, Routes } from 'react-router-dom';
+import Courses from './Courses/Courses';
 function App() {
   return (
     <div className="bg-orange-50 h-screen object-cover w-full">
-      <Navbar />
-      <Banner />
-      <AvailBooks />
-      <Footer />
+      {/* <Home /> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/course" element={<Courses />} />
+      </Routes>
     </div>
   );
 }
