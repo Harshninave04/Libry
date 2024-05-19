@@ -16,6 +16,22 @@ function Navbar() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  const navItems = (
+    <>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/course">Course</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+      <li>
+        <a href="/about">About</a>
+      </li>
+    </>
+  );
   return (
     <div
       className={`bg-orange-50 md:bg-orange-50 max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${
@@ -42,10 +58,7 @@ function Navbar() {
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-3 font-medium text-lg shadow rounded-box w-52">
-              <li>Home</li>
-              <li>Courses</li>
-              <li>About</li>
-              <li>Contact</li>
+              {navItems}
             </ul>
           </div>
           <a className="btn btn-ghost text-2xl">Libry</a>
@@ -53,10 +66,7 @@ function Navbar() {
         <div className="navbar-end space-x-6">
           <div className="navbar-center hidden lg:flex space-x-8">
             <ul className="menu menu-horizontal px-1 space-x-8 text-lg cursor-pointer">
-              <li>Home</li>
-              <li>Courses</li>
-              <li>About</li>
-              <li>Contact</li>
+              {navItems}
             </ul>
           </div>
           <div className="hidden md:block">
