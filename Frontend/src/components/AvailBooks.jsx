@@ -45,14 +45,14 @@ function AvailBooks() {
   };
   return (
     <>
-      <div className="max-w-screen-2xl bg-orange-50 md:bg-orange-50 container mx-auto  md:px-20 px-4">
+      <div className="max-w-screen-2xl h-4/5 md:h-screen bg-orange-50 md:bg-orange-50 container mx-auto  px-4 md:px-20 ">
         <div>
           <h1 className="text-2xl md:text-4xl md:underline font-bold text-slate-500 md:text-slate-700 pb-2">
             Available for you{' '}
           </h1>
           <p>Books you can explore for free</p>
         </div>
-        <div>
+        <div className="my-2 md:my-10">
           {/* <Slider {...settings}>
             {filterBook.map((item) => {
               <Cards item={item} key={item.id} />;
