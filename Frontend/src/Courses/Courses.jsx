@@ -1,3 +1,4 @@
+// import Cards from '../components/Cards';
 import Course from '../components/Course';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
@@ -9,6 +10,7 @@ function Courses() {
       <div className="min-h-screen">
         <Course />
       </div>
+
       <Footer />
     </>
   );
