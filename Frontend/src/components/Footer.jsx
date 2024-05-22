@@ -1,7 +1,8 @@
 function Footer() {
   return (
     <div>
-      <footer className="footer p-10 text-black mb-0 bg-orange-100">
+      <hr />
+      <footer className="footer p-10 text-black dark:bg-black dark:text-white mb-0 bg-orange-100">
         <nav>
           <h6 className="footer-title">Services</h6>
           <a className="link link-hover">Branding</a>
@@ -23,7 +24,7 @@ function Footer() {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
-      <footer className="footer px-10 py-4 bg-orange-100 text-black border-base-300 md:border-base-300">
+      <footer className="footer px-10 py-4 bg-orange-100 text-black dark:bg-black dark:text-white border-base-300 md:border-base-300">
         <aside className="items-center grid-flow-col">
           <svg
             width="24"
