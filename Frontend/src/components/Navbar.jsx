@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
+import Login from './Login';
 
 function Navbar() {
   // For Dark/light mode
@@ -55,7 +56,7 @@ function Navbar() {
     <div
       className={`bg-orange-50 md:bg-orange-50 max-w-screen-2xl dark:bg-black dark:text-white container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${
         sticky
-          ? 'shadow-xl md:shadow-md duration-300 dark:bg-slate-950 dark:text-white transition-all ease-in-out'
+          ? 'shadow-xl md:shadow-md duration-300 dark:shadow-slate-700 dark:shadow-md dark:bg-slate-950 dark:text-white transition-all ease-in-out'
           : ''
       }`}>
       <div className="navbar text-black dark:text-white">
@@ -78,7 +79,7 @@ function Navbar() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-lg dropdown-content mt-3 z-[1] p-3 font-medium text-white bg-black shadow rounded-box w-52 dark:text-black dark:bg-white">
+              className="menu menu-lg dropdown-content mt-3 z-[1] p-3 font-medium text-white bg-black shadow rounded-box w-52 dark:text-black dark:bg-slate-300">
               {navItems}
             </ul>
           </div>
@@ -130,9 +131,12 @@ function Navbar() {
             </svg>
           </label>
           <div>
-            <a className="btn text-white hover:bg-slate-700 px-4 text-base dark:bg-white dark:text-black">
+            <a
+              className="btn text-white hover:bg-slate-700 px-4 text-base dark:bg-white dark:text-black"
+              onClick={() => document.getElementById('my_modal_2').showModal()}>
               Login
             </a>
+            <Login />
           </div>
         </div>
       </div>
