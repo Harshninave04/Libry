@@ -74,7 +74,7 @@ function Login() {
                     <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                       Don’t have an account yet?{' '}
                       <a
-                        href="/Login"
+                        href="/Signup"
                         className="font-medium text-primary-600 hover:underline text-blue-300 dark:text-blue-300">
                         Sign up
                       </a>
