@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from 'react';
 import Login from './Login';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   // For Dark/light mode
@@ -39,16 +40,24 @@ function Navbar() {
   const navItems = (
     <>
       <li>
-        <a href="/">Home</a>
+        <Link to="/">
+          <a href="/">Home</a>
+        </Link>
       </li>
       <li>
-        <a href="/course">Course</a>
+        <Link to="/course">
+          <a href="/course">Course</a>
+        </Link>
       </li>
       <li>
-        <a href="/contact">Contact</a>
+        <Link to="/contact">
+          <a href="/contact">Contact</a>
+        </Link>
       </li>
       <li>
-        <a href="/about">About</a>
+        <Link to="/about">
+          <a href="/about">About</a>
+        </Link>
       </li>
     </>
   );
