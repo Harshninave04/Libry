@@ -11,7 +11,7 @@ function Login() {
   return (
     <div>
       <dialog id="my_modal_2" className="modal">
-        <div className="modal-box text-black bg-white md:bg-transparent dark:md:bg-transparent dark:bg-slate-800 py-10">
+        <div className="modal-box text-black bg-white md:bg-gradient-to-b from-teal-100 via-indigo-200 to-slate-200 dark:md:bg-transparent dark:bg-slate-800 py-10">
           <section className="">
             <div className="flex flex-col items-center justify-center px-6 mx-auto lg:py-0">
               <div className="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 dark:bg-slate-800">
