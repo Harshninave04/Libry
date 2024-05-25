@@ -137,7 +137,7 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="p-4 py-6 rounded-lg bg-orange-100 text-lg dark:bg-gray-800 md:p-8">
+              <div className="p-4 py-6 rounded-lg bg-orange-100 border border-black text-lg dark:bg-gray-800 md:p-8">
                 <form>
                   <div className="-mx-2 md:items-center md:flex">
                     <div className="flex-1 px-2">

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Signup() {
   return (
     <>
@@ -85,11 +87,13 @@ function Signup() {
                   </button>
                   <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                     Already have an account?{' '}
-                    <a
-                      href="/"
-                      className="font-medium text-blue-300 hover:underline dark:text-primary-500">
-                      Login here
-                    </a>
+                    <Link to="/">
+                      <a
+                        href="/"
+                        className="font-medium text-blue-300 hover:underline dark:text-primary-500">
+                        Login here
+                      </a>
+                    </Link>
                   </p>
                 </form>
               </div>
