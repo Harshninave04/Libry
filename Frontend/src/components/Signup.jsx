@@ -1,17 +1,27 @@
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 function Signup() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => console.log(data);
   return (
     <>
       <div className="flex flex-col py-48 md:py-0 md:block">
-        <section className="md:bg-black dark:bg-gray-900">
+        <section className="md:bg-gradient-to-b from-teal-100 via-indigo-200 to-slate-200 dark:bg-gray-900">
           <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div className="w-full bg-slate-800 rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
               <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                 <h1 className="text-xl font-bold leading-tight tracking-tight text-white md:text-2xl">
                   Create an account
                 </h1>
-                <form className="space-y-4 md:space-y-6" action="#">
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="space-y-4 md:space-y-6"
+                  action="#">
                   <div>
                     <label
                       htmlFor="email"
@@ -25,7 +35,13 @@ function Signup() {
                       className="bg-gray-700 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       placeholder="name@company.com"
                       required=""
+                      {...register('email', { required: true })}
                     />
+                    {errors.email && (
+                      <p className="text-red-500 text-xs italic mt-1 ml-2">
+                        This field is required
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -40,7 +56,13 @@ function Signup() {
                       placeholder="••••••••"
                       className="bg-gray-700 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       required=""
+                      {...register('password', { required: true })}
                     />
+                    {errors.password && (
+                      <p className="text-red-500 text-xs italic  mt-1 ml-2">
+                        This field is required
+                      </p>
+                    )}
                   </div>
                   <div>
                     <label
@@ -55,7 +77,13 @@ function Signup() {
                       placeholder="••••••••"
                       className="bg-gray-700 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       required=""
+                      {...register('confirmPassword', { required: true })}
                     />
+                    {errors.confirmPassword && (
+                      <p className="text-red-500 text-xs italic  mt-1 ml-2">
+                        This field is required
+                      </p>
+                    )}
                   </div>
                   <div className="flex items-start">
                     <div className="flex items-center h-5">
