@@ -1,28 +1,32 @@
-const express = require('express');
-const dotenv = require('dotenv');
+import express from 'express';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import bookRoute from './Route/book.route.js';
+
 const app = express();
+app.use(express.json());
+app.use('/book', bookRoute);
 
 dotenv.config();
 
 const PORT = process.env.PORT || 3010;
+const MONGODB_URI = process.env.MONGODB_URI;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!!');
-});
+// MongoDB connection
+mongoose
+  .connect(MONGODB_URI)
+  .then(() => {
+    console.log('Connected to MongoDB');
+    app.listen(PORT, () => {
+      console.log(`listening on port ${PORT}`);
+    });
+  })
+  .catch((err) => console.log(err));
 
 app.get('/product', (req, res) => {
   res.send('<h1>Products page</h1>');
 });
 
-// This route will handle all the requests that are
-// not handled by any other route handler. In
-// this handler we will redirect the user to
-// an error page with NOT FOUND message and status
-// code as 404 (HTTP status code for NOT found)
 app.all('*', (req, res) => {
   res.status(404).send('<h1>404! Page not found</h1>');
-});
-
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
 });
