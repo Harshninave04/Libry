@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "2.4.22",
+  "description": "Libry backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harshninave04/Libry.git"
+  },
+  "author": "Harsh <harshninave58@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harshninave04/Libry/issues"
+  },
+  "homepage": "https://github.com/Harshninave04/Libry#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.1"
+  }
+}
