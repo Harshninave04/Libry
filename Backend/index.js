@@ -2,12 +2,14 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import bookRoute from './Route/book.route.js';
+import userRoute from './Route/user.route.js';
 import cors from 'cors';
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use('/book', bookRoute);
+app.use('/user', userRoute);
 
 dotenv.config();
 
