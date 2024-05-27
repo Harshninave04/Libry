@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 function Signup() {
   const {
@@ -7,7 +8,28 @@ function Signup() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const onSubmit = async (data) => {
+    const userInfo = {
+      name: data.name,
+      email: data.email,
+      password: data.password,
+    };
+    await axios
+      .post('http://localhost:3009/user/signup', userInfo)
+      .then((res) => {
+        console.log(res.data);
+        if (res.data) {
+          alert('Signup successfull!');
+        }
+      })
+      .catch((err) => {
+        if (err.response) {
+          console.log(err.response.data.error);
+          alert('Error: ' + err.response.data.error);
+        }
+      });
+  };
   return (
     <>
       <div className="flex flex-col py-48 md:py-0 md:block">
@@ -22,6 +44,27 @@ function Signup() {
                   onSubmit={handleSubmit(onSubmit)}
                   className="space-y-4 md:space-y-6"
                   action="#">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block mb-2 text-sm font-medium text-white dark:text-white">
+                      Your name
+                    </label>
+                    <input
+                      type="name"
+                      name="name"
+                      id="name"
+                      className="bg-gray-700 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      placeholder="lisa"
+                      required=""
+                      {...register('name', { required: true })}
+                    />
+                    {errors.name && (
+                      <p className="text-red-500 text-xs italic mt-1 ml-2">
+                        This field is required
+                      </p>
+                    )}
+                  </div>
                   <div>
                     <label
                       htmlFor="email"
@@ -64,27 +107,7 @@ function Signup() {
                       </p>
                     )}
                   </div>
-                  <div>
-                    <label
-                      htmlFor="confirm-password"
-                      className="block mb-2 text-sm font-medium text-white dark:text-white">
-                      Confirm password
-                    </label>
-                    <input
-                      type="password"
-                      name="confirm-password"
-                      id="confirm-password"
-                      placeholder="••••••••"
-                      className="bg-gray-700 border border-gray-300 text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      required=""
-                      {...register('confirmPassword', { required: true })}
-                    />
-                    {errors.confirmPassword && (
-                      <p className="text-red-500 text-xs italic  mt-1 ml-2">
-                        This field is required
-                      </p>
-                    )}
-                  </div>
+
                   <div className="flex items-start">
                     <div className="flex items-center h-5">
                       <input
