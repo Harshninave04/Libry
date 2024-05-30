@@ -20,8 +20,11 @@ function Login() {
         console.log(res.data);
         if (res.data) {
           toast.success('Login successfull!');
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
         }
-        localStorage.setItem('login_successfull', JSON.stringify(res.data.user));
+        localStorage.setItem('Users', JSON.stringify(res.data.user));
       })
       .catch((err) => {
         if (err.response) {
