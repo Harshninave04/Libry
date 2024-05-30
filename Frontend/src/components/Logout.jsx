@@ -23,7 +23,7 @@ function Logout() {
   return (
     <div>
       <a
-        className="btn text-white hover:bg-slate-700 px-4 text-base dark:bg-red-200 dark:text-black"
+        className="btn text-black hover:bg-slate-700 px-4 text-base border-none bg-gradient-to-r from-rose-400 to-red-500 dark:bg-red-200 dark:text-black"
         onClick={handleLogout}>
         Logout
       </a>
