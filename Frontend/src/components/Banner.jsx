@@ -1,4 +1,25 @@
+// import axios from 'axios';
+import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
+
 function Banner() {
+  const [currUser, setCurrUser] = useState([]);
+
+  function onLoad() {
+    const currentUser = localStorage.getItem('Users');
+    if (currentUser) {
+      setCurrUser(currentUser);
+      setTimeout(() => {
+        toast.success('Now you can visit courses section !');
+      }, 3000);
+    }
+  }
+  // onLoad();
+
+  useEffect(() => {
+    onLoad();
+  }, []); // empty dependency array ensures this runs once on mount
+
   return (
     <>
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 md:flex my-12">
