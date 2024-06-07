@@ -356,18 +356,23 @@ const About = () => {
                   </svg>
                 </div>
                 <div className="">
-                  <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-black dark:text-white ">
-                    Board
-                  </p>
-                  <p className="mt-2 font-normal text-base leading-6 text-gray-600">
-                    It is a long established fact that a reader will be distracted by the readable
-                    content of a page when looking at its layout.
-                  </p>
+                  <a
+                    href="../../public/resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer">
+                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-black dark:text-white">
+                      Resume
+                    </p>
+                    <p className="mt-2 font-normal text-base leading-6 text-gray-600">
+                      Click here to view/download my resume.
+                    </p>
+                  </a>
                 </div>
               </div>
 
               {/* <!-- Press Card --> */}
-              <div className="flex p-4 shadow-md dark:shadow-md dark:shadow-gray-800">
+              {/* <div className="flex p-4 shadow-md dark:shadow-md dark:shadow-gray-800">
                 <div className="mr-6">
                   <svg
                     className="mr-6"
@@ -401,7 +406,7 @@ const About = () => {
                     content of a page when looking at its layout.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
