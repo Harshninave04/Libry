@@ -9,13 +9,18 @@ const About = () => {
         <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
           <div className="w-full lg:w-6/12">
             <h2 className="w-full font-semibold text-black dark:text-white lg:text-4xl text-3xl lg:leading-10 leading-9">
-              We are here to make great design accessible and delightfull for everyone
+              Discover, Read, and Enjoy a Vast Collection of Free and Premium Books Across All
+              Genres with Libry
             </h2>
             <p className="font-normal text-base leading-6 text-gray-600 mt-6">
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout. The point of using Lorem Ipsum.In the first
-              place we have granted to God, and by this our present charter confirmed for us and our
-              heirs forever that the English Church shall be free, and shall have her rights entire,
+              Libry is your ultimate destination for discovering, reading, and enjoying a vast
+              collection of books. Whether you're looking for free literature or premium titles, our
+              platform offers personalized recommendations tailored to your interests. With a
+              user-friendly interface, seamless browsing experience, and secure payment options for
+              paid content, Libry makes it easy to find your next great read. Explore books across
+              all genres, from fiction and non-fiction to self-help and academic texts. Join a
+              community of book lovers and embark on your literary journey with Libry, where every
+              book you discover brings a new adventure.
             </p>
           </div>
           <div className="w-full lg:w-6/12">
@@ -158,29 +163,32 @@ const About = () => {
         <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
           <div>
             <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-black dark:text-white mt-6">
-              Founded
+              Founder
             </p>
             <p className="font-normal text-base leading-6 text-gray-600 mt-6">
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout.
+              I Harsh Ninave, the visionary behind Libry, is a dedicated computer science undergrad
+              with a passion for building and exploring. I combined my technical skills with a love
+              for books, I created Libry to provide a comprehensive platform for book enthusiasts to
+              discover and enjoy a wide array of literature.
             </p>
           </div>
           <div>
             <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-black dark:text-white mt-6">
-              50M montly enrichments
+              Diverse Collection
             </p>
             <p className="font-normal text-base leading-6 text-gray-600 mt-6">
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout.
+              Libry boasts an extensive and diverse collection of books, catering to all kinds of
+              readers. Whether you’re a fan of classic literature, contemporary fiction, or niche
+              genres, Libry has something for everyone.
             </p>
           </div>
           <div className="sm:block hidden">
             <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-black dark:text-white mt-6">
-              400k User
+              Community and Engagement{' '}
             </p>
             <p className="font-normal text-base leading-6 text-gray-600 mt-6">
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout.
+              We believe in fostering a vibrant community of book lovers. Our platform offers
+              various ways for users to engage, share, and connect over their love for reading.
             </p>
           </div>
         </div>
@@ -229,11 +237,11 @@ const About = () => {
         <div className="sm:hidden grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
           <div>
             <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">
-              400k User
+              Community and Engagement{' '}
             </p>
             <p className="font-normal text-base leading-6 text-gray-600 mt-6">
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout.
+              We believe in fostering a vibrant community of book lovers. Our platform offers
+              various ways for users to engage, share, and connect over their love for reading.
             </p>
           </div>
         </div>
@@ -244,20 +252,20 @@ const About = () => {
               Our Mission
             </h2>
             <p className="font-normal text-base leading-6 text-gray-600 mt-6 w-full lg:w-10/12 xl:w-9/12">
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout. The point of using Lorem Ipsum.In the first
-              place we have granted to God, and by this our present charter confirmed for us and our
-              heirs forever that the English Church shall be free, and shall have her rights entire,
-              and her liberties inviolate; and we will that it be thus observed; which is apparent
-              from
+              At Libry, our mission is to revolutionize the way people discover, access, and engage
+              with literature. We are committed to promoting a reading culture by providing easy
+              access to a diverse collection of books, inspiring more people to embrace reading as a
+              lifelong habit. Through personalized recommendations, seamless browsing experiences,
+              and secure access to premium content, we empower readers to find books they love,
+              ensuring that everyone can explore and enjoy literature.
             </p>
             <p className="font-normal text-base leading-6 text-gray-600 w-full lg:w-10/12 xl:w-9/12 mt-10">
-              It is a long established fact that a reader will be distracted by the readable content
-              of a page when looking at its layout. The point of using Lorem Ipsum.In the first
-              place we have granted to God, and by this our present charter confirmed for us and our
-              heirs forever that the English Church shall be free, and shall have her rights entire,
-              and her liberties inviolate; and we will that it be thus observed; which is apparent
-              from
+              Additionally, we strive to build a vibrant community of book lovers, where users can
+              connect, share recommendations, and engage in meaningful discussions, fostering a
+              deeper love for reading. Furthermore, we support authors by providing a platform for
+              their work to reach a global audience, connecting authors directly with their readers.
+              Join us in our mission to make reading more accessible, enjoyable, and enriching for
+              everyone.
             </p>
           </div>
           <div className="w-full lg:w-6/12">
@@ -300,8 +308,9 @@ const About = () => {
                     Team
                   </p>
                   <p className="mt-2 font-normal text-base leading-6 text-gray-600">
-                    It is a long established fact that a reader will be distracted by the readable
-                    content of a page when looking at its layout.
+                    I <span className="font-bold underline">Harsh Ninave</span>, The sole creator
+                    and driving force behind Libry, I handled all aspects of development, design,
+                    and implementation to bring this platform to life.
                   </p>
                 </div>
               </div>
