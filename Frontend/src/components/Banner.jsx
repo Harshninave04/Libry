@@ -44,7 +44,7 @@ function Banner() {
           </div>
         </div>
         <div className="flex justify-center items-center md:flex md:justify-center md:items-center md:w-1/2 mt-4 mx-4 md:mt-16 ">
-          <img src="../../public/books_png.png" alt="" className="w-72 md:w-96 h-full md:ml-28" />
+          <img src="books_png.png" alt="" className="w-72 md:w-96 h-full md:ml-28" />
         </div>
         <div className="join md:hidden mb-4 flex justify-center items-center ">
           <input
