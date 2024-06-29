@@ -19,7 +19,7 @@ function Signup() {
       password: data.password,
     };
     await axios
-      .post('http://localhost:3009/user/signup', userInfo)
+      .post('https://libry.onrender.com/user/signup', userInfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
