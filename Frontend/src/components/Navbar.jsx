@@ -67,12 +67,13 @@ function Navbar() {
     </>
   );
   return (
-    <div
-      className={`bg-orange-50 md:bg-orange-50 max-w-screen-2xl dark:bg-black dark:text-white container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${
-        sticky
-          ? 'shadow-xl md:shadow-md duration-300 dark:shadow-slate-700 dark:shadow-md dark:bg-slate-950 dark:text-white transition-all ease-in-out'
-          : ''
-      }`}>
+    <div className="w-full bg-orange-50 dark:bg-black fixed top-0 left-0 right-0 z-50">
+  <div
+    className={`max-w-screen-2xl container mx-auto px-4 ${
+      sticky
+        ? 'shadow-xl md:shadow-md duration-300 dark:shadow-slate-700 dark:shadow-md dark:bg-slate-950 dark:text-white transition-all ease-in-out'
+        : ''
+    }`}>
       <div className="navbar text-black dark:text-white">
         <div className="navbar-start ">
           <div className="dropdown ">
@@ -159,6 +160,7 @@ function Navbar() {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 }
