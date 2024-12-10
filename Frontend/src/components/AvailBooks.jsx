@@ -4,17 +4,16 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import axios from 'axios';
-
 import Slider from 'react-slick';
 import Cards from './Cards';
 import { useState, useEffect } from 'react';
+
 function AvailBooks() {
   const [book, setBook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
       try {
         const res = await axios.get('https://libry.onrender.com/book');
-        // console.log(res.data);/
         const data = res.data.filter((data) => data.category === 'Free');
         setBook(data);
       } catch (error) {
@@ -23,8 +22,7 @@ function AvailBooks() {
     };
     getBook();
   }, []);
-  // const filterBook = list.filter((data) => data.category === 'Free');
-  // console.log(filterBook);
+
   var settings = {
     dots: true,
     infinite: true,
@@ -60,27 +58,27 @@ function AvailBooks() {
       },
     ],
   };
+
   return (
-    <>
-      <div className="w-full bg-orange-50 dark:bg-black py-8">
-        <div className="max-w-screen-2xl mx-auto px-4">
-          <div>
-            <h1 className="text-2xl md:text-4xl underline font-bold text-slate-500 dark:text-white pb-2">
-              Available for you
-            </h1>
-            <p className="dark:text-gray-500">Books you can explore for free</p>
-          </div>
-          <div className="my-6">
-            <Slider {...settings}>
-              {book.map((item) => (
-                <Cards item={item} key={item.id} />
-              ))}
-            </Slider>
-          </div>
+    <div className="w-full bg-orange-50 dark:bg-black py-8">
+      <div className="max-w-screen-2xl mx-auto px-4">
+        <div>
+          <h1 className="text-2xl md:text-4xl underline font-bold text-slate-500 dark:text-white pb-2">
+            Available for you
+          </h1>
+          <p className="dark:text-gray-500">Books you can explore for free</p>
+        </div>
+
+        <div className="my-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {book.map((item) => (
+            <Cards item={item} key={item.id} />
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 export default AvailBooks;
+
+
