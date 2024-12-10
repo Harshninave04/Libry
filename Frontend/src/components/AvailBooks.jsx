@@ -62,24 +62,21 @@ function AvailBooks() {
   };
   return (
     <>
-      <div className="max-w-screen-2xl h-4/5 md:h-screen bg-orange-50 dark:bg-black md:bg-orange-50 container mx-auto  px-4 md:px-20 ">
-        <div>
-          <h1 className="text-2xl md:text-4xl md:underline font-bold text-slate-500 dark:text-white md:text-slate-700 pb-2">
-            Available for you{' '}
-          </h1>
-          <p className="dark:text-gray-500">Books you can explore for free</p>
-        </div>
-        <div className="my-2 md:my-10">
-          {/* <Slider {...settings}>
-            {filterBook.map((item) => {
-              <Cards item={item} key={item.id} />;
-            })}
-          </Slider> */}
-          <Slider {...settings}>
-            {book.map((item) => (
-              <Cards item={item} key={item.id} />
-            ))}
-          </Slider>
+      <div className="w-full bg-orange-50 dark:bg-black py-8">
+        <div className="max-w-screen-2xl mx-auto px-4">
+          <div>
+            <h1 className="text-2xl md:text-4xl underline font-bold text-slate-500 dark:text-white pb-2">
+              Available for you
+            </h1>
+            <p className="dark:text-gray-500">Books you can explore for free</p>
+          </div>
+          <div className="my-6">
+            <Slider {...settings}>
+              {book.map((item) => (
+                <Cards item={item} key={item.id} />
+              ))}
+            </Slider>
+          </div>
         </div>
       </div>
     </>
