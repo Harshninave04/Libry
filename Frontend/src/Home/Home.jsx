@@ -1,3 +1,4 @@
+import { AboutHome } from '../components/AboutHome';
 import AvailBooks from '../components/AvailBooks';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
@@ -9,7 +10,8 @@ function Home() {
       <div className='bg-orange-50'>
 
       <Navbar />
-      <Banner />
+        <Banner />
+        <AboutHome/>
       <AvailBooks />
       <Footer />
       </div>
