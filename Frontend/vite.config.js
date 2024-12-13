@@ -8,4 +8,7 @@ export default defineConfig({
       'react-icons': 'react-icons',
     },
   },
+  optimizeDeps: {
+    include: ['react-icons'],
+  },
 });
