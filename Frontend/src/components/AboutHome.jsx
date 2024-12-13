@@ -1,8 +1,8 @@
 import React from 'react';
-import { FaInstagram } from 'react-icons/fa/FaInstagram';
-import { FaGithub } from 'react-icons/fa/FaGithub';
-import { FaLinkedin } from 'react-icons/fa/FaLinkedin';
-import { FaTwitter } from 'react-icons/fa/FaTwitter';
+import { FaInstagram } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 const socialLinks = [
