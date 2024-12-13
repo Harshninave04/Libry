@@ -3,11 +3,11 @@
     "id": 1,
     "name": "Book 1",
     "author": "Author 1",
-    "title": "Cricket History",
-    "description": "Description 1",
+    "title": "Content Creation Template",
+    "description": "Guide to creating a content on social media",
     "price": 100,
     "category": "Free",
-    "image": "sunset.png"
+    "image": "content-creation-template.pdf"
   },
   {
     "id": 2,
