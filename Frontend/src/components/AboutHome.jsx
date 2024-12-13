@@ -1,13 +1,32 @@
 import React from 'react';
-import { faTwitter, faBehance, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 const socialLinks = [
-  { icon: faInstagram, href: 'https://www.instagram.com/harsh__ninave_/', target: "_blank",  rel: "noopener noreferrer" },
-  { icon: faGithub, href: 'https://github.com/Harshninave04', target: "_blank", rel: "noopener noreferrer" },
-  { icon: faLinkedin, href: 'https://www.linkedin.com/in/harshninave2004', target: "_blank", rel: "noopener noreferrer" },
-  { icon: faTwitter, href: 'https://x.com/HarshNinave2004', target: "_blank", rel: "noopener noreferrer" },
+  {
+    icon: FaInstagram,
+    href: 'https://www.instagram.com/harsh__ninave_/',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    icon: FaGithub,
+    href: 'https://github.com/Harshninave04',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    icon: FaLinkedin,
+    href: 'https://www.linkedin.com/in/harshninave2004',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
+  {
+    icon: FaTwitter,
+    href: 'https://x.com/HarshNinave2004',
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  },
 ];
 
 const infoList = [
@@ -29,16 +48,15 @@ const ProfileKeyInfo = () => (
 
 const SocialLinks = ({ links }) => (
   <ul className="inline-flex mt-6">
-        {links.map((link, i) => (
-        <li key={i} className='mr-5'>
-      <a
+    {links.map((link, i) => (
+      <li key={i} className="mr-5">
+        <a
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl opacity-70 hover:opacity-100 transition duration-300"
-      >
-          <FontAwesomeIcon icon={link.icon} />
-      </a>
+          className="text-2xl opacity-70 hover:opacity-100 transition duration-300">
+          <link.icon />
+        </a>
       </li>
     ))}
   </ul>
