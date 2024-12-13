@@ -1,6 +1,15 @@
 import React from 'react';
 
 function Cards({ item }) {
+  const handleBuyNowClick = () => {
+    // Assuming item.downloadLink is the URL to the book file
+    const downloadLink = item.image;
+    if (downloadLink) {
+      window.open(downloadLink, '_blank');
+    } else {
+      console.error('Download link is not available');
+    }
+  };
   return (
     <div className="p-1 w-full max-w-xs mx-auto">
       <div className="bg-white dark:bg-neutral-800 border border-neutral-100 dark:border-neutral-700 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 h-[390px] flex flex-col">
@@ -31,7 +40,9 @@ function Cards({ item }) {
             </p>
           </div>
 
-          <button className="w-full py-2 text-sm font-medium text-neutral-700 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-600 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-colors duration-300">
+          <button
+            onClick={handleBuyNowClick}
+            className="w-full py-2 text-sm font-medium text-neutral-700 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-600 rounded-lg hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-colors duration-300">
             Buy Now
           </button>
         </div>
